@@ -4,50 +4,16 @@
   </div>
 
   <div class="create-room">
-    <a href="#">チャットを作成する</a>
+    <%= link_to "チャットを作成する", new_room_path %>
  </div>
 </div>
 
 <div class="rooms">
-  <div class="room">
-    <div class="room-name">
-      <a href="#">kouchikun</a>
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= room.name %></a>
+      </div>
     </div>
-  </div>
-
-  <div class="room">
-    <div class="room-name">
-      <a href="#">nishidakun</a>
-    </div>
-  </div>
-
-  <div class="room">
-    <div class="room-name">
-      <a href="#">kocha</a>
-    </div>
-  </div>
-
-  <div class="room">
-    <div class="room-name">
-      <a href="#">niko</a>
-    </div>
-  </div>
-
-  <div class="room">
-    <div class="room-name">
-      <a href="#">saki</a>
-    </div>
-  </div>
-
-  <div class="room">
-    <div class="room-name">
-      <a href="#">mita</a>
-    </div>
-  </div>
-
-  <div class="room">
-    <div class="room-name">
-      <a href="#">kochichi</a>
-    </div>
-  </div>
+  <% end %>
 </div>
